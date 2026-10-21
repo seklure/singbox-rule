@@ -41,6 +41,8 @@ https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BanAD.srs
 
 完整清单见 `manifest.json` 中每个文件的 `raw` / `jsdelivr` 字段。
 
+> 注意：jsDelivr 对文件有缓存（通常数小时），上游刚同步完成时可能读到旧版本；需要立即生效可改用 GitHub Raw，或在 URL 后加 `?t=时间戳` 破缓存（sing-box 的 `url` 字段允许带查询参数）。
+
 ## 本地手动同步
 
 ```bash
