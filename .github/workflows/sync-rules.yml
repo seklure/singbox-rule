@@ -1,0 +1,53 @@
+name: Sync sing-box rulesets
+
+# 每天北京时间 04:17 自动同步一次（cron 使用 UTC：20:17 前一天）
+# 也可在 Actions 页面手动点击 Run workflow 立即执行
+on:
+  schedule:
+    - cron: "17 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-rulesets
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 下载并校验规则集
+        id: sync
+        continue-on-error: true
+        run: bash scripts/sync.sh
+
+      - name: 生成 manifest.json
+        run: python3 scripts/make_manifest.py
+
+      - name: 提交并推送变更
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "上游无变化，跳过提交"
+            exit 0
+          fi
+          git add -A
+          git commit -m "chore: sync rulesets $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
+
+      - name: 同步结果检查
+        if: steps.sync.outcome == 'failure'
+        run: |
+          echo "::error::本次同步有文件下载失败或校验不通过，详见上方日志；已成功的文件仍已提交"
+          exit 1

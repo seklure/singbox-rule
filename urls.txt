@@ -1,0 +1,37 @@
+# 上游 sing-box rule-set 源地址清单
+# 每行一个 URL；以 # 开头为注释。同步脚本以 URL 最后一段作为本地文件名。
+# 来源：compatible-config.json 中 https://link.onlysing.com 的链接（共 34 个）
+https://link.onlysing.com/get/singbox/ruleset/XiaoNuoReject.srs
+https://link.onlysing.com/get/singbox/ruleset/BanAD.srs
+https://link.onlysing.com/get/singbox/ruleset/BanProgramAD.srs
+https://link.onlysing.com/get/singbox/ruleset/BanEasyList.srs
+https://link.onlysing.com/get/singbox/ruleset/BanEasyListChina.srs
+https://link.onlysing.com/get/singbox/ruleset/BanEasyPrivacy.srs
+https://link.onlysing.com/get/singbox/ruleset/XiaoNuoDirect.srs
+https://link.onlysing.com/get/singbox/ruleset/LocalAreaNetwork.srs
+https://link.onlysing.com/get/singbox/ruleset/ChinaIp.srs
+https://link.onlysing.com/get/singbox/ruleset/ChinaDomain.srs
+https://link.onlysing.com/get/singbox/ruleset/ChinaCompanyIp.srs
+https://link.onlysing.com/get/singbox/ruleset/Download.srs
+https://link.onlysing.com/get/singbox/ruleset/UnBan.srs
+https://link.onlysing.com/get/singbox/ruleset/ChinaMedia.srs
+https://link.onlysing.com/get/singbox/ruleset/Bilibili.srs
+https://link.onlysing.com/get/singbox/ruleset/OneDrive.srs
+https://link.onlysing.com/get/singbox/ruleset/Microsoft.srs
+https://link.onlysing.com/get/singbox/ruleset/Apple.srs
+https://link.onlysing.com/get/singbox/ruleset/Epic.srs
+https://link.onlysing.com/get/singbox/ruleset/Sony.srs
+https://link.onlysing.com/get/singbox/ruleset/Steam.srs
+https://link.onlysing.com/get/singbox/ruleset/NetEaseMusic.srs
+https://link.onlysing.com/get/singbox/ruleset/Dns.srs
+https://link.onlysing.com/get/singbox/ruleset/Telegram.srs
+https://link.onlysing.com/get/singbox/ruleset/AI.srs
+https://link.onlysing.com/get/singbox/ruleset/OpenAi.srs
+https://link.onlysing.com/get/singbox/ruleset/YouTube.srs
+https://link.onlysing.com/get/singbox/ruleset/Netflix.srs
+https://link.onlysing.com/get/singbox/ruleset/Bahamut.srs
+https://link.onlysing.com/get/singbox/ruleset/ProxyMedia.srs
+https://link.onlysing.com/get/singbox/ruleset/BilibiliHMT.srs
+https://link.onlysing.com/get/singbox/ruleset/IqiyiHMT.srs
+https://link.onlysing.com/get/singbox/ruleset/ProxyGFWlist.srs
+https://link.onlysing.com/get/singbox/ruleset/XiaoNuoProxy.srs
