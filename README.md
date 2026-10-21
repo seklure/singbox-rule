@@ -68,6 +68,82 @@ python3 scripts/rewrite-config.py -i compatible-config.json -o compatible-config
 
 脚本只替换 `link.onlysing.com/get/singbox/ruleset/*.srs` 这类 URL，其余内容与格式原样保留。
 
+## 修改规则内容（`.srs` 不能直接文本编辑）
+
+`.srs` 是编译产物：`SRS` + 1 字节版本号（本仓库全是 `2`）+ zlib 压缩的二进制域名匹配器。文本条目虽然以「长度前缀字符串」形式出现在解压后的尾部，但整体偏移由匹配器结构决定，**手改任何一个字节都会让整个文件失效**，所以不要用文本编辑器打开，也不要用 sed 之类去替换字符串。
+
+正确姿势是官方工具链（sing-box 1.10+ 起提供）：
+
+```bash
+# 1) 二进制 → 可读 JSON（无损，见下方验证）
+sing-box rule-set decompile ruleset/AI.srs -o custom/AI.json
+
+# 2) 用任意编辑器改 custom/AI.json，加/删/改数组里的条目
+
+# 3) JSON → 二进制（可选，需要外链 .srs 时）
+sing-box rule-set compile custom/AI.json -o custom/AI.srs
+```
+
+> 验证过的无损性：`AI.srs` 反编译再编译，产物与原文件**字节完全一致**（527 字节，SHA256 `1e84897202c839cd…`）。本仓库 34 个 `.srs` 全部可以成功反编译。
+
+`AI.srs` 的实际结构（1 条规则、45 个条目）：
+
+| 字段 | 数量 | 含义 |
+| --- | --- | --- |
+| `domain` | 10 | 完整域名精确匹配，如 `chatgpt.com` 之外的 `ai.google.dev`、`api.groq.com` |
+| `domain_suffix` | 32 | 后缀匹配，如 `openai.com`、`claude.ai`、`perplexity.ai`、`cursor.com` |
+| `domain_keyword` | 3 | 关键词匹配，`anthropic`、`claude`、`openai` |
+
+`custom/AI.json` 就是它的反编译副本，可直接编辑。
+
+### 落地方式（三选一）
+
+**A. 直接用 JSON 源格式外链（推荐，改完即生效，不用编译）**
+
+配置里把该条目换成：
+
+```json
+{
+  "tag": "AI",
+  "type": "remote",
+  "format": "source",
+  "url": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/custom/AI.json",
+  "http_client": "direct-http"
+}
+```
+
+`.json` 结尾时 `format` 可省略（自动推断为 `source`）。改完 JSON 推送到仓库即可，sing-box 按 `update_interval`（默认 `1d`）重新拉取。
+
+**B. 编译成 `.srs` 再外链（binary 格式，体积更小、加载更快）**
+
+```bash
+sing-box rule-set compile custom/AI.json -o custom/AI.srs
+```
+
+地址写 `.../custom/AI.srs`，`format` 写 `binary` 或省略。
+
+**C. 不动任何文件，直接内联规则**
+
+在 `compatible-config.json` 的 `route.rules` 里加一条内联规则（优先级高于 `rule_set`），可用于临时「抽走」或补充某个域名：
+
+```json
+{
+  "domain_suffix": ["deepseek.com"],
+  "outbound": "🚀 节点选择"
+}
+```
+
+> 注意：`ruleset/` 下的文件每天会被同步覆盖，**自己的改动一律放 `custom/`**（`scripts/sync.sh` 只写 `ruleset/`）。
+
+### 装 sing-box（用于 compile / decompile）
+
+```bash
+brew install sing-box
+# 或从发布页下压缩包（国内可用镜像前缀 https://gh-proxy.com/ 加速）
+curl -L -o sb.tar.gz "https://gh-proxy.com/https://github.com/SagerNet/sing-box/releases/download/v1.14.3/sing-box-1.14.3-darwin-arm64.tar.gz"
+tar xzf sb.tar.gz && ./sing-box-1.14.3-darwin-arm64/sing-box version
+```
+
 ## 新增 / 删除规则集
 
 编辑 `urls.txt`（每行一个上游 URL，`#` 开头为注释），本地跑一次 `bash scripts/sync.sh` 即可。同步脚本以 URL 最后一段作为文件名。
