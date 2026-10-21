@@ -144,6 +144,41 @@ curl -L -o sb.tar.gz "https://gh-proxy.com/https://github.com/SagerNet/sing-box/
 tar xzf sb.tar.gz && ./sing-box-1.14.3-darwin-arm64/sing-box version
 ```
 
+## 自己解析任意 `.srs`（不需要装 sing-box）
+
+`scripts/srs-dump.py` 是纯 Python 实现的解析器（只用标准库），可直接读任意 sing-box 规则集：
+
+```bash
+python3 scripts/srs-dump.py ruleset/AI.srs                  # 打印完整 JSON
+python3 scripts/srs-dump.py ruleset/AI.srs -o AI.json       # 写成文件
+python3 scripts/srs-dump.py https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/AI.srs   # 直接解析 URL
+python3 scripts/srs-dump.py ruleset/AI.srs --summary        # 只看摘要（字段 × 条目数 + 样例）
+python3 scripts/srs-dump.py ruleset/*.srs --summary         # 批量摘要
+```
+
+正确性：对本仓库 34 个 `.srs` 的输出与官方 `sing-box rule-set decompile` **逐字段完全一致**（含 `domain` / `domain_suffix` / `domain_keyword` / `ip_cidr` / 逻辑规则 / `invert`）。
+
+限制：`adguard_domain`（AdGuard 专用结构）、`network_interface_address`（v4+ 的接口地址规则）未实现；`network_type` / `query_type` 输出原始枚举数字而非 `wifi` 之类的名字。
+
+### 格式要点（想自己写解析器的话）
+
+```
+文件 = "SRS" + 1 字节版本号 + zlib( 正文 )
+正文 = uvarint 规则数 + 规则 × N
+规则 = 1 字节类型：0 普通 / 1 逻辑
+  普通 = 重复[ 1 字节条目类型 + 载荷 ] ... 直到 0xFF，再跟 1 字节 invert
+  逻辑 = 1 字节模式(0=and,1=or) + uvarint 子规则数 + 子规则 × N + 1 字节 invert
+```
+
+条目类型（编号即字节值）：`0` query_type、`1` network、`2` domain、`3` domain_keyword、`4` domain_regex、`5` source_ip_cidr、`6` ip_cidr、`7/9` source_port/port（uvarint 个数 + BE uint16）、`8/10` source_port_range/port_range、`11` process_name、`12` process_path、`13` package_name、`14/15` wifi_ssid/bssid、`16` adguard_domain、`17` process_path_regex、`18` network_type、`19/20` network_is_expensive/constrained（无载荷）、`21/22` 接口地址、`23` package_name_regex、`0xFF` 结束。
+
+两个关键载荷的编码：
+
+- **域名**：succinct 域名树 —— `1 字节版本(0)` + `uvarint 个数 + 8 字节大端 uint64 × N`（leaves）+ 同样的 labelBitmap + `uvarint 长度 + 字节`（labels）。还原 key 用 LOUDS 遍历，再把每个 key 反转即为域名；前缀为 `\r` 的是「仅子域」后缀，`\n` 的是普通后缀。
+- **IP**：`1 字节版本(1)` + 8 字节大端区间数 + 每区间两段 `uvarint 长度(4 或 16) + 地址`，读出来是闭区间，需合并后再转 CIDR。
+
+版本号只决定「允许出现哪些条目」，读取结构不变；`> 5` 的版本应拒绝。
+
 ## 新增 / 删除规则集
 
 编辑 `urls.txt`（每行一个上游 URL，`#` 开头为注释），本地跑一次 `bash scripts/sync.sh` 即可。同步脚本以 URL 最后一段作为文件名。
