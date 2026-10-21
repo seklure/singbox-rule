@@ -49,6 +49,19 @@ python3 scripts/make_manifest.py  # 重建 manifest.json
 git add -A && git commit -m "sync" && git push
 ```
 
+## 把配置里的旧地址换成本仓库地址
+
+```bash
+# 换成 jsDelivr CDN 地址（国内直连更稳）
+python3 scripts/rewrite-config.py -i compatible-config.json -o compatible-config.jsdelivr.json
+
+# 换成 GitHub Raw 地址
+python3 scripts/rewrite-config.py -i compatible-config.json -o compatible-config.github.json \
+  --base https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset
+```
+
+脚本只替换 `link.onlysing.com/get/singbox/ruleset/*.srs` 这类 URL，其余内容与格式原样保留。
+
 ## 新增 / 删除规则集
 
 编辑 `urls.txt`（每行一个上游 URL，`#` 开头为注释），本地跑一次 `bash scripts/sync.sh` 即可。同步脚本以 URL 最后一段作为文件名。
