@@ -20,7 +20,7 @@ sing-box 远程规则集（`.srs`）镜像仓库。每天由 GitHub Actions 从�
 
 - 频率：每天一次，北京时间 **04:17**（UTC `17 20 * * *`）。
 - 触发方式：定时 + 手动（Actions 页面 → Sync sing-box rulesets → Run workflow）。
-- 只有内容真的变化时才产生提交，提交信息形如 `chore: sync rulesets 2026-10-21 08:02 UTC`。
+- 只有内容真的变化时才覆盖 `.srs` 文件；`manifest.json` 的 `generated_at` 每次运行都会更新，因此正常情况下每天会有一个仅包含时间戳变化的提交，可作为“同步仍在正常工作”的心跳。提交信息形如 `chore: sync rulesets 2026-10-21 08:07 UTC`。
 - 若某个上游文件 404 或返回内容不是合法 `.srs`（缺少 `SRS` 魔数），该文件不会被覆盖，job 标记失败以便提醒。
 
 ## 外链下载地址
