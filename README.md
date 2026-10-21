@@ -30,7 +30,11 @@ sing-box 远程规则集（`.srs`）镜像仓库。每天由 GitHub Actions 从�
 | 方式 | 地址模板 | 说明 |
 | --- | --- | --- |
 | GitHub Raw | `https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/<文件名>` | 官方直链，国内可能需要代理 |
+| GitHub `/raw/` | `https://github.com/seklure/singbox-rule/raw/main/ruleset/<文件名>` | 会 302 跳转到上面那条 raw 地址，效果相同，多一跳 |
 | jsDelivr | `https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/<文件名>` | CDN 加速，国内一般可直连，适合直接写进配置 |
+
+> ⚠️ **不要用网页上的 `/blob/main/...` 地址**（如 `https://github.com/seklure/singbox-rule/blob/main/ruleset/AI.srs`）。它返回的是 GitHub 文件查看器页面（`Content-Type: text/html`，约 200 KB 的 HTML），不是规则集本体，sing-box 拉下来会把 HTML 当 `.srs` 解析并报错。网页上对应「Download raw file」按钮的地址才是上面三种之一。
+
 
 示例：
 
