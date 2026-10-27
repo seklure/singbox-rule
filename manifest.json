@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-26T23:52:07Z",
+  "generated_at": "2026-10-27T23:46:24Z",
   "branch": "main",
   "count": 34,
-  "total_size": 1356392,
+  "total_size": 1356146,
   "files": [
     {
       "name": "AI.srs",
@@ -217,14 +217,14 @@
     {
       "name": "XiaoNuoDirect.srs",
       "size": 438336,
-      "sha256": "a90323577cba873eba3d78acb444e658e96a5bb27e1905e1eedc74b309bdfa24",
+      "sha256": "3cd6071b68088b35f31baeec4ec31d40a51863cb2df8e4efa6ffc8199fec08f3",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/XiaoNuoDirect.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/XiaoNuoDirect.srs"
     },
     {
       "name": "XiaoNuoProxy.srs",
-      "size": 163997,
-      "sha256": "8c190acad1c21f2c8182fa0fc4aa317a7fe63c4d587f5cd14679543126c52df2",
+      "size": 163751,
+      "sha256": "ef264e2843c0651b34724865b3b18c0dd7873cd7d8b876ac47b06efee47bad7e",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/XiaoNuoProxy.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/XiaoNuoProxy.srs"
     },
