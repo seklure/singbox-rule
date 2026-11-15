@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-14T23:54:51Z",
+  "generated_at": "2026-11-15T23:57:59Z",
   "branch": "main",
   "count": 34,
-  "total_size": 1355792,
+  "total_size": 1355387,
   "files": [
     {
       "name": "AI.srs",
@@ -216,8 +216,8 @@
     },
     {
       "name": "XiaoNuoDirect.srs",
-      "size": 437640,
-      "sha256": "64f44880860f1b0d02527d9fc141e08465a1f09a15f8b4fe4d40ff678a997d0f",
+      "size": 437235,
+      "sha256": "cc944c2e30c63c16b5926be26b7da8a4eacb33eae26e9c752a6a0c5b9002d481",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/XiaoNuoDirect.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/XiaoNuoDirect.srs"
     },
