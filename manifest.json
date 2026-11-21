@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-20T01:46:44Z",
+  "generated_at": "2026-11-21T01:30:21Z",
   "branch": "main",
   "count": 34,
-  "total_size": 1355388,
+  "total_size": 1355379,
   "files": [
     {
       "name": "AI.srs",
@@ -174,8 +174,8 @@
     },
     {
       "name": "ProxyGFWlist.srs",
-      "size": 28477,
-      "sha256": "7c4877ce212aa44ac0bfa05c2d7acc9e9d975e0f130c85ec0a351cf2a326d29d",
+      "size": 28468,
+      "sha256": "f1531b12ddd80510ec883d690953c3ccdd0c2c278eeefa2508544d3211cf28d7",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ProxyGFWlist.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ProxyGFWlist.srs"
     },
