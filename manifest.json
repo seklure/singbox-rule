@@ -1,244 +1,244 @@
 {
-  "generated_at": "2026-11-27T02:51:37Z",
+  "generated_at": "2026-11-28T02:40:34Z",
   "branch": "main",
   "count": 34,
-  "total_size": 1379947,
+  "total_size": 1379503,
   "files": [
     {
       "name": "AI.srs",
-      "size": 610,
-      "sha256": "d80dcdf29b5d1c32c205f706a41d21c11c86f34a5386f095fc7d0be4ea32f61a",
+      "size": 607,
+      "sha256": "88b8abb33068753f4b440d41fd8e61a773af2d5f02412eb95ef19c5d63101fe0",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/AI.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/AI.srs"
     },
     {
       "name": "Apple.srs",
-      "size": 330,
-      "sha256": "ebc39490a237d8676c2a960188f6201058541772eb082015b1af631c6394b863",
+      "size": 328,
+      "sha256": "76a885031c0ea2cec6d3ed03f381358abecc2edf4a8e4caf64f07774203a5a88",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Apple.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Apple.srs"
     },
     {
       "name": "Bahamut.srs",
-      "size": 118,
-      "sha256": "7029d7b647b24b7dec9766a155400b4472c49f5697f6d6aad22c3a2116fc2075",
+      "size": 115,
+      "sha256": "98c47042936a8b194070dd3df6422f1a221a70cdc480a015600c181e218ea07c",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Bahamut.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Bahamut.srs"
     },
     {
       "name": "BanAD.srs",
-      "size": 3783,
-      "sha256": "6bda1c7196a1f31426a1eec67488b2d575ffced493d9b213a1321e5bcde915b6",
+      "size": 3775,
+      "sha256": "85c7ebd31b5c1d56ef82fb84117e0e437844c5166ef0fa169afa008b1a2b1f31",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/BanAD.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BanAD.srs"
     },
     {
       "name": "BanEasyList.srs",
-      "size": 332191,
-      "sha256": "e67d2ffc56acbec60920b2418fca66fc5e442d9420be75c135ee418614ccef23",
+      "size": 335820,
+      "sha256": "4180e214066bc3c69bfa5648b9911ab1acc6c2557fe93c261b077edb782d6bca",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/BanEasyList.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BanEasyList.srs"
     },
     {
       "name": "BanEasyListChina.srs",
-      "size": 37363,
-      "sha256": "e54de54edbfdc33822c47548e40414e76127128740cbffb00a30c1d39281c701",
+      "size": 38271,
+      "sha256": "139011fcf9e0bb317417abd4152bede7143db2a8d3dc2eec83af7b41bb1b4cd0",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/BanEasyListChina.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BanEasyListChina.srs"
     },
     {
       "name": "BanEasyPrivacy.srs",
-      "size": 356860,
-      "sha256": "3aa6cf3179370d8f6496feb10fbbce1db5b2bfe18de7098368f7be89b86925a5",
+      "size": 355627,
+      "sha256": "0fc2523c26ec5b320bad4d4bcb4a79a29d46bdb5d0ac85c988d30aab7236ff10",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/BanEasyPrivacy.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BanEasyPrivacy.srs"
     },
     {
       "name": "BanProgramAD.srs",
-      "size": 7082,
-      "sha256": "6a02e1fa059f8bff1fe8bebc374c602cb507da423bd010a538ee44019b219fe2",
+      "size": 7072,
+      "sha256": "1d9b650b538758b28a5e81145cdef5100550967934ce29513d5e5348ad349938",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/BanProgramAD.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BanProgramAD.srs"
     },
     {
       "name": "Bilibili.srs",
-      "size": 246,
-      "sha256": "ea0c96fd16a0f7b65203aa9966e898eadaa9e05fba37372e9921d185c64f5d6e",
+      "size": 243,
+      "sha256": "f0f32dbaea185bb5ad81443f6b0e48a33b601f85aec91042ea5256dc7d06a1a9",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Bilibili.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Bilibili.srs"
     },
     {
       "name": "BilibiliHMT.srs",
-      "size": 238,
-      "sha256": "8a412ec0b4b6f9d906888d9e174018f1ca140fe5be857afb992c5b1153eb69c0",
+      "size": 235,
+      "sha256": "7681f7c7f416c0e730fa8e9dab8cbbb2ea1e11db12970a3475e5405c85f9baa2",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/BilibiliHMT.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/BilibiliHMT.srs"
     },
     {
       "name": "ChinaCompanyIp.srs",
-      "size": 17,
-      "sha256": "7e07ba63e12d8c6877636559e1b5cc810e0d57a83842811b37355b5db7f5985c",
+      "size": 14,
+      "sha256": "1023ac76b6b4ca2c45d7b2ebda8de85eadb8b17125602143c050a2a89f6c57f4",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ChinaCompanyIp.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ChinaCompanyIp.srs"
     },
     {
       "name": "ChinaDomain.srs",
-      "size": 3864,
-      "sha256": "d7d5af4d4f5fbe65e62f991c1ceff1a53afc099d3496b0a7b40bd676b67ce590",
+      "size": 3860,
+      "sha256": "db9c69b491c1ca222a3713a3ad24adf451a55e17939057dcd25d204df4baf651",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ChinaDomain.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ChinaDomain.srs"
     },
     {
       "name": "ChinaIp.srs",
-      "size": 17,
-      "sha256": "7e07ba63e12d8c6877636559e1b5cc810e0d57a83842811b37355b5db7f5985c",
+      "size": 14,
+      "sha256": "1023ac76b6b4ca2c45d7b2ebda8de85eadb8b17125602143c050a2a89f6c57f4",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ChinaIp.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ChinaIp.srs"
     },
     {
       "name": "ChinaMedia.srs",
-      "size": 416,
-      "sha256": "f26d33315ccb0b24d3910f33ed41032df2f927a0714d68ddf5ffe98a29b0fab5",
+      "size": 413,
+      "sha256": "01e2fbf964a8f9d4d757d217c60e3ae88ca635d07bb71abacfea90ddbd7a4dce",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ChinaMedia.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ChinaMedia.srs"
     },
     {
       "name": "Dns.srs",
       "size": 453,
-      "sha256": "1512a76bea5a6ca899317dc4bb34823453edb9807855bb4a9aa049b7886e400e",
+      "sha256": "4c674879c28cd561185802a9cc07a8f3087ad31712b3e354e421c44fde4ed339",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Dns.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Dns.srs"
     },
     {
       "name": "Download.srs",
-      "size": 177,
-      "sha256": "3c3a763750ff54961ef8761aada3c08f43299df2859cad911512052dad24f5f7",
+      "size": 174,
+      "sha256": "96cc2674b063b01127a180210d9688d1432642cf4045a2d52626818bcbd61d9c",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Download.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Download.srs"
     },
     {
       "name": "Epic.srs",
-      "size": 106,
-      "sha256": "e76f8327ed901d2db50fa931c2f9fdeca177838ae3fd99c1c8ca264c8bc50e7e",
+      "size": 103,
+      "sha256": "fd541bc0db59b82ce2b8a1e70830b66adf4bb75e1521fc74d40d1e97438e6003",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Epic.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Epic.srs"
     },
     {
       "name": "IqiyiHMT.srs",
-      "size": 66,
-      "sha256": "63338e07238494fa0a20e20021037fa0356b16585fa2a7ce50b085f154a6710c",
+      "size": 63,
+      "sha256": "674848a706d3ac0bf3fe005cb8009d26957bef0bc16b694f6098b12e90c9d3e5",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/IqiyiHMT.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/IqiyiHMT.srs"
     },
     {
       "name": "LocalAreaNetwork.srs",
-      "size": 367,
-      "sha256": "21beccd0cf7e5d635a50bec51e375932bc41f51c520ba638ae15e51b239959bc",
+      "size": 364,
+      "sha256": "83f0a2b1e8cebd1c14079efc041d8c1078b49aca0396bea9e9735f5139364fc9",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/LocalAreaNetwork.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/LocalAreaNetwork.srs"
     },
     {
       "name": "Microsoft.srs",
-      "size": 663,
-      "sha256": "5d1b9adfd9bf1b554970defd0830457ca3c8af59d59c3ceb5d9bd331f6d26fff",
+      "size": 660,
+      "sha256": "e44e99bdcfced006fd3c609c03050e544d31010ad5276c29f44f06212b17f6d3",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Microsoft.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Microsoft.srs"
     },
     {
       "name": "NetEaseMusic.srs",
-      "size": 257,
-      "sha256": "91c508f92c4fa9998c8f0ab546216cb90811b1179b4a6b946c87cfb3d2728a26",
+      "size": 254,
+      "sha256": "8c40d09d9911e3b3bb3af06b44745a045ab655f114af32fbe79295b767a62c83",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/NetEaseMusic.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/NetEaseMusic.srs"
     },
     {
       "name": "Netflix.srs",
-      "size": 415,
-      "sha256": "bad9a5d20b134410ed0ccac4868259f9b78aed1a31e08a359797ddad1a10af76",
+      "size": 412,
+      "sha256": "8c14114f08123724507e8f67ff21e9cc62f59063617afd1faabd2812cbb2063f",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Netflix.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Netflix.srs"
     },
     {
       "name": "OneDrive.srs",
-      "size": 232,
-      "sha256": "6197f506f9e311cf893e822f378e6ed761829b613bf204c13b8038789ad357b4",
+      "size": 229,
+      "sha256": "89ed9f669cbdde198ef4dcb1dc9cfdcf8301f025947576659108d2bf9e07c6f9",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/OneDrive.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/OneDrive.srs"
     },
     {
       "name": "OpenAi.srs",
-      "size": 250,
-      "sha256": "c27d73bd1566aee1374fb95d7b68c58c94df55ad03d30949d8592fa9b21b7270",
+      "size": 246,
+      "sha256": "7245a30da950f687c6dad0c7b519d51b8fab6e72c67a7ee363b965abf89bdec1",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/OpenAi.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/OpenAi.srs"
     },
     {
       "name": "ProxyGFWlist.srs",
-      "size": 28616,
-      "sha256": "3197d8ed5ccb876e73bcf6f086f938ee73af741fe768a3a6d41dad8973dc4487",
+      "size": 29863,
+      "sha256": "e77a019a5623b973e132011db6c1c90c461a4367cd7297faf43ff20ee438aa5e",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ProxyGFWlist.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ProxyGFWlist.srs"
     },
     {
       "name": "ProxyMedia.srs",
-      "size": 2714,
-      "sha256": "355d022736228f60b93703f7a7ea35589cab7e3d48c3d350c51e377c83e2d242",
+      "size": 2711,
+      "sha256": "5f6cc89773fdfa9e6f5745ac18afff9ba1851c1e9ed5b3c8a2018394286ff496",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/ProxyMedia.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/ProxyMedia.srs"
     },
     {
       "name": "Sony.srs",
-      "size": 121,
-      "sha256": "c7a89daf68d86477b8712137533d0f0335a30897c13af1f7255753a3346984f6",
+      "size": 118,
+      "sha256": "5ac61c42b189d2a0c521b70ea058a66570ffe163a5e6e1158ceea7db48d46570",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Sony.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Sony.srs"
     },
     {
       "name": "Steam.srs",
-      "size": 265,
-      "sha256": "1828a16349d47d0ecf20654060947fd2bef8b09d0b4fccc683759afa590fc056",
+      "size": 262,
+      "sha256": "2ee0b09d501adbfafade4cda7e936a7c71c171e5baf2a63f7c9a7e49c31f093e",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Steam.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Steam.srs"
     },
     {
       "name": "Telegram.srs",
-      "size": 195,
-      "sha256": "3e57403324805973ec241c7fd0c7a860cbe69a95f0d28c7fcbf4825353d6f5ba",
+      "size": 192,
+      "sha256": "937000070290eb528f5637cbb7c958beac2adfcb021cae25c18e72eaa44a93a9",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/Telegram.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/Telegram.srs"
     },
     {
       "name": "UnBan.srs",
-      "size": 449,
-      "sha256": "4e2f936c8ddb93711a708e5ec212011414ca6730333a3d1582ea6792cf1c731d",
+      "size": 446,
+      "sha256": "78c878533a0efd2aa881d003f1f67632b1c8a1ce4ada3bcd76a60f6c7c79309c",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/UnBan.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/UnBan.srs"
     },
     {
       "name": "XiaoNuoDirect.srs",
-      "size": 437308,
-      "sha256": "e1cd72c8dce4867d5dfdcc037b585ffc885f82cef1d4d0884a319f722f32b652",
+      "size": 431702,
+      "sha256": "c0e09353e0fe7aba56b5965d6bca1b2829772fd0e40eccc70152ed29a9872c97",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/XiaoNuoDirect.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/XiaoNuoDirect.srs"
     },
     {
       "name": "XiaoNuoProxy.srs",
-      "size": 163538,
-      "sha256": "bb6bbb36d3dd77e19ff815fac73ee4157ac9402012eea5c9e55ef28880b2ef58",
+      "size": 164244,
+      "sha256": "7472d830fd9dd2b2fbddb47f173895b6d60812ae7cd0868b2c219dd442a1ac59",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/XiaoNuoProxy.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/XiaoNuoProxy.srs"
     },
     {
       "name": "XiaoNuoReject.srs",
-      "size": 425,
-      "sha256": "a9027719fd3c23ced1feaadbccb3deb345fc1997807912c0f4fc4e8b5038c2f6",
+      "size": 421,
+      "sha256": "9aba04914c998926c81c38ccc59c03a679e4985fcb7e7dc4da6a2939fc5c49e9",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/XiaoNuoReject.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/XiaoNuoReject.srs"
     },
     {
       "name": "YouTube.srs",
-      "size": 195,
-      "sha256": "945269e647163f8c9d1d195f8567d964ce91fae032067725dc6ec3dbaacfcd27",
+      "size": 192,
+      "sha256": "7e2129062b98c36c017d01caed6b35435c9795b959b986ca1eab240409ac8861",
       "raw": "https://raw.githubusercontent.com/seklure/singbox-rule/main/ruleset/YouTube.srs",
       "jsdelivr": "https://cdn.jsdelivr.net/gh/seklure/singbox-rule@main/ruleset/YouTube.srs"
     }
